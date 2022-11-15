@@ -55,7 +55,7 @@ const vote = async (req: NextApiRequest, res: NextApiResponse) => {
     const percentage = Math.round(options1._count.option/total._count.option * 100)
 
     console.log(percentage)
-    res.status(200).json({"success": true, "percentage": percentage})
+    res.status(200).json({"success": true, "percentage": percentage, "choice": choice})
 
 };
 
